@@ -72,6 +72,8 @@
 
         if (!(daysSpan && hoursSpan && minutesSpan && secondsSpan)) return;
 
+        var countDownDate = new Date("Apr 14, 2023 00:00:00").getTime();
+
         function timer() {
 
             const now = new Date().getTime();
