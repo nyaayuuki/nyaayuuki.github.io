@@ -63,7 +63,7 @@
     * ------------------------------------------------------ */
     const ssCountdown = function () {
 
-        const finalDate = new Date("Apr 14, 2023 00:00:00").getTime();
+        const finalDate = new Date("June 10, 2023 00:00:00").getTime();
         const daysSpan = document.querySelector('.counter .ss-days');
         const hoursSpan = document.querySelector('.counter .ss-hours');
         const minutesSpan = document.querySelector('.counter .ss-minutes');
