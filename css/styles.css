@@ -574,7 +574,64 @@ textarea {
     appearance         : none;
 }
 
-
+@media(max-width: 45rem){
+  .menu{
+    background-image: linear-gradient(to bottom, $gradient-start 0%, $gradient-end 100%);
+    a{
+      font-size:1.4rem;
+      padding: 1rem 0.5rem;
+    }
+    > ol{
+      flex-direction: column;
+      > li {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        > a:nth-last-child(2){
+          position:relative;
+          &:after{
+            content:'';
+            position:absolute;
+            top: 50%;
+            margin-top: -0.25rem;
+            right: 1.5rem;
+            border-top: 0.5rem solid #fff;
+            border-left: 0.3rem solid transparent;
+            border-right: 0.3rem solid transparent;
+            transition: 250ms ease all;
+          }
+        }
+        &:focus-within,
+        &:focus,
+        > a:hover,
+        > a:focus-within,
+        > a:focus{
+          &:nth-last-child(2){
+            &:after{
+              transform: rotate(180deg);
+            }
+          }
+          + ol{
+            max-height: 12rem;
+          }
+        }
+        > ol{
+          background: rgba(0,0,0,0.1);
+          box-shadow: inset 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+          overflow:hidden;
+          max-height:0;
+          transition: 250ms ease all;
+          > li{
+            a{
+              display:block;
+              font-size:1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 /* ===================================================================
  * # GRID v4.0.0
